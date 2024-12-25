@@ -1,7 +1,10 @@
-FROM nginx:alpine
+# Use the official Nginx image as the base image
+FROM nginx
 
-# Copy your Nginx configuration file
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose port 80
+# Expose the default Nginx HTTP port
 EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
