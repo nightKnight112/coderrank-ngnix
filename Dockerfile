@@ -1,7 +1,7 @@
 # Use the official Nginx image as the base image
 FROM nginx
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose the default Nginx HTTP port
 EXPOSE 80
